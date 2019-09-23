@@ -25,7 +25,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String query = "DROP TABLE IF EXISTS" + TABLE_SCORES;
+        String query = "DROP TABLE IF EXISTS " + TABLE_SCORES;
         db.execSQL(query);
         onCreate(db);
     }
@@ -38,7 +38,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db) {
         String query = " CREATE TABLE " + TABLE_SCORES + " ( " + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_SCORE_NAME + " TEXT " +  COLUMN_SCORE + " INTEGER " + ");";
+                COLUMN_SCORE_NAME + " TEXT, " +  COLUMN_SCORE + " INTEGER )" + ";";
         db.execSQL(query);
     }
 
