@@ -7,12 +7,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
+    private static final String TAG = "MyDataBaseHelper";
     //Define facts about the database to set it up including its name
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "scores.db";
 
     //Define tables in the database
-    public static final String TABLE_SCORES = "scores";             // datatbase name
+    public static final String TABLE_SCORES = "scores";             // table name
     public static final String COLUMN_ID = "id";                    // unique id for the entry
     public static final String COLUMN_SCORE_NAME = "scorename";
     public static final String COLUMN_SCORE = "score";

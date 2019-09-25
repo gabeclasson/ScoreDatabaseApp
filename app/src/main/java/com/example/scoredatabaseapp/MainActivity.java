@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         nameEditText = (EditText) findViewById(R.id.name);
         scoreEditText = (EditText) findViewById(R.id.score);
         displayTextView = (TextView) findViewById(R.id.myScores);
-        databaseHelper = new MyDatabaseHelper(this, null, null, 1);
+        databaseHelper = new MyDatabaseHelper(this, null, null, 1); // version is there if you want to upgrade or downgrade your database
         printDB();  // prints current database contents
 
     }
